@@ -1,0 +1,57 @@
+{
+  "name": "hierarchy-cli",
+  "version": "0.0.1",
+  "description": "automatic and magic project builder assistant",
+  "main": "./dist/index.js",
+  "scripts": {
+    "debug": "nodemon src/index.ts",
+    "convert": "ts-jest config:migrate ./jest.config.js",
+    "test": "jest --watch",
+    "coverage": "jest --collectCoverageFrom=src/**/*.ts --coverage",
+    "build": "tsc",
+    "build:watch": "tsc -w",
+    "lint:list": "eslint */**/*.js --fix",
+    "lint": "eslint */**/*.js --fix",
+    "start:prod": "nodemon src/index.ts"
+  },
+  "keywords": [
+    "Project",
+    "Generator",
+    "CLI",
+    "Helper"
+  ],
+  "dependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.8.7",
+    "@babel/preset-env": "^7.8.7",
+    "@types/jest": "^25.1.4",
+    "@types/node": "^13.9.1",
+    "chalk": "^3.0.0",
+    "chalk-animation": "^1.6.0",
+    "commander": "^5.0.0",
+    "dargs": "^7.0.0",
+    "envinfo": "^7.5.0",
+    "inquirer": "^7.1.0",
+    "log-update": "^4.0.0",
+    "nash": "^3.0.0",
+    "ora": "^4.0.3",
+    "prompts": "^2.3.1",
+    "terminal-kit": "^1.35.1",
+    "ts-jest": "^25.2.1",
+    "ts-node": "^8.6.2",
+    "typescript": "^3.8.3"
+  },
+  "devDependencies": {
+    "@babel/polyfill": "^7.8.7",
+    "@typescript-eslint/eslint-plugin": "^2.23.0",
+    "@typescript-eslint/parser": "^2.23.0",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "jest": "^25.1.0",
+    "nodemon": "^2.0.2",
+    "prettier": "^1.19.1"
+  },
+  "author": "Serkan Tunc <serkantuncofficial@gmail.com>",
+  "license": "MIT"
+}
