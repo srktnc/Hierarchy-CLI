@@ -1,0 +1,13 @@
+/*Hierarchy-CLI*/
+/*Author by Serkan Tunc*/
+/*STANDART CSS*/
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body{
+    background-color: whitesmoke;
+}
