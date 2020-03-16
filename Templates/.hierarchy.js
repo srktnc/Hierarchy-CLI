@@ -1,6 +1,6 @@
 module.exports = {
   projectName: "",
-  projectMain: "index.js",
+  projectMain: "index.html",
   projectTemplate: "SHTML",
   interpreter: "anyBrowser",
 };
