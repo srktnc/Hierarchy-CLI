@@ -28,9 +28,9 @@ program
 
 program
     .command('serve')
-    .option('-p --port <port>', 'Template')
+    .option('-l --link', 'Template')
     .action((opts: any) => {
-        file.serve(opts.port);
+        file.serve(opts.link);
     });
 
 program.parse(process.argv);

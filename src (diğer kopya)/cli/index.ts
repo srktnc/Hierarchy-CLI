@@ -26,11 +26,5 @@ program
     file.add(fileName, fileType, opts.link);
   });
 
-program
-    .command('serve')
-    .option('-p --port <port>', 'Template')
-    .action((opts: any) => {
-        file.serve(opts.port);
-    });
 
 program.parse(process.argv);

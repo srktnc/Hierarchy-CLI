@@ -2,8 +2,6 @@ import fs from 'fs';
 import https from 'https';
 import replace from 'replace-in-file';
 import { exec } from 'child_process';
-import { constants } from 'os';
-import errno = module;
 
 export default class File {
   public fileTemplate = {
@@ -72,7 +70,7 @@ export default class File {
 
   public add(file: any, type: any, link: any) {
     async function inject(fileName: any, value: any) {
-      const hierarchyrc = require(process.cwd() + '/' + '.hierarchy.js');
+      let hierarchyrc = require(process.cwd() + '/' + '.hierarchy.js');
 
       const options = {
         files: process.cwd() + '/' + 'src' + '/' + hierarchyrc.projectMain,
@@ -122,27 +120,7 @@ export default class File {
     }
   }
 
-  public async serve(port: any = '1453') {
-    const hierarchyrc = require(process.cwd() + '/' + '.hierarchy.js');
-
-    const myShellScript = exec('serve -l ' + port + ' src/');
-
-    // @ts-ignore
-    myShellScript.stdout.on('data', (data: any) => {
-      console.clear();
-      console.log('Server stared: ' + 'http://localhost:' + port);
-    });
-    // @ts-ignore
-    myShellScript.stderr.on('data', (data: any) => {
-      console.log('Please wait serve downloading');
-      // @ts-ignore
-      exec('npm i -g serve').stdout.on('data', (data: any) => {
-        // @ts-ignore
-        exec('serve -l ' + port + ' src/').stdout.on('data', (data: any) => {
-          console.clear();
-          console.log('Server stared: ' + 'http://localhost:' + port);
-        });
-      });
-    });
+  public serve(){
+    exec('cd' + ' ' + process.cwd());
   }
 }
