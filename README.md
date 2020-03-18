@@ -15,8 +15,18 @@ $ npm install --global hierarchy-cli
 
 ## Documentation
 
+### Create Project
 ```sh
-hierarchy-cli create --template html-standart newProject
+hierarchy-cli create <projectName> <template> [--git]
+```
+### Add File
+```sh
+hierarchy-cli add <fileName> <fileType> [--link]
+```
+
+### Serve web project
+```sh
+hierarchy-cli serve
 ```
 
 ## Contributors
